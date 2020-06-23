@@ -36,7 +36,7 @@ def root():
         # Show last product added
         cur.execute('SELECT productId, name, price, description, image, stock FROM products ORDER BY productId DESC LIMIT 1 ')
         # Show all items
-        cur.execute('SELECT productId, name, price, description, image, stock FROM products LIMIT 1')
+        cur.execute('SELECT productId, name, price, description, image, stock FROM products')
         item_data = cur.fetchall()
         # Show all categories
         cur.execute('SELECT categoryId, name FROM categories')
